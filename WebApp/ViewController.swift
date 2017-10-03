@@ -25,6 +25,8 @@ class ViewController: UIViewController, WKUIDelegate {
         let myURL = URL(string: "https://www.yakuter.com")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
+        
+        webView.allowsBackForwardNavigationGestures = true
     }
 
 
