@@ -12,6 +12,7 @@ import WebKit
 class ViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var webView: WKWebView!
     
+    
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
@@ -27,6 +28,14 @@ class ViewController: UIViewController, WKUIDelegate {
         webView.load(myRequest)
         
         webView.allowsBackForwardNavigationGestures = true
+        
+        setNeedsStatusBarAppearanceUpdate()
+        
+        view.backgroundColor = UIColor(red: 61/255, green: 91/255, blue: 151/255, alpha: 1)
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .default
     }
 
 
